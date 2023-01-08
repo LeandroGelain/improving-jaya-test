@@ -1,0 +1,7 @@
+pt-BR:
+  models:
+    Event: "Evento "
+  errors:
+    messages:
+      not_authenticated: "Por favor reveja sua autorização. Atualmente, não autorizado."
+      not_found: "Nenhum item encontrado."

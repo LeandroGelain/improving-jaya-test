@@ -1,18 +1,18 @@
 class Events::Create
   attr_accessor :params
 
-  def Initialize(params)
+  def initialize(params)
     @params = params
   end
 
   def execute
-    register_event
+    register_event!
   end
 
   private
 
-  def register_event
-    Event.create(format_params)
+  def register_event!
+    Event.create!(format_params)
   end
 
   def format_params

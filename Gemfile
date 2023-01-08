@@ -6,6 +6,9 @@ ruby "2.7.0"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
 
+# Serializacao de dados JSON
+gem 'active_model_serializers', '~> 0.10.2'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
@@ -50,7 +53,9 @@ gem "bootsnap", require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "byebug", platforms: %i[ mri mingw x64_mingw ]
+  # Debugger
+  gem 'pry-rails'
   # Mock de objetos para teste
   gem 'factory_bot_rails'
   # Geracao de nomes aletorios

@@ -1,3 +1,3 @@
-class Friend < ApplicationRecord
+class Event < ApplicationRecord
   include EventQuery
 end

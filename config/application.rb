@@ -15,11 +15,12 @@ module DeveloperTestV2
     config.autoload_paths << Rails.root.join('app/resources')
     # Configuration for the application, engines, and railties goes here.
     Rails.application.config.hosts<< '.sa.ngrok.io'
-    #
-    # These settings can be overridden in specific environments using the files
-    # in config/environments, which are processed later.
-    #
-    # config.time_zone = "Central Time (US & Canada)"
-    # config.eager_load_paths << Rails.root.join("extras")
+
+    config.eager_load_paths += Dir[Rails.root.join('app', 'models', '**', '*')]
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+
+    config.api_only = true
+    config.autoload_paths += %W(#{config.root}/lib)
+    config.autoload_paths << "#{Rails.root}/lib" 
   end
 end
