@@ -46,12 +46,6 @@ docker exec -it octo_api /bin/sh
 rspec
 ```
 
-### Rodando Testes
-
-```
-bundle exec rspec
-```
-
 ## Documentação
 
 | HTTP | Rota | Descrição |
@@ -62,4 +56,3 @@ bundle exec rspec
 ### Postman Collection
 
 Postman_Collection.json na raíz do projeto.  
-Link de Importação do Postman: 
