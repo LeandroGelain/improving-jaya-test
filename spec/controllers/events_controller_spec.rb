@@ -76,7 +76,7 @@ RSpec.describe EventsController, type: :controller do
   describe 'GET #index' do
     context 'when user is authenticated' do
       before do
-        request.headers['HTTP_USER_NAME'] = 'user_name_example'
+        request.headers['HTTP_LOGIN'] = 'user_name_example'
         request.headers['HTTP_PASSWORD'] = 'password_example'
       end
 
@@ -114,7 +114,7 @@ RSpec.describe EventsController, type: :controller do
 
       
       before do
-        request.headers['HTTP_USER_NAME'] = 'invalid_user_name'
+        request.headers['HTTP_LOGIN'] = 'invalid_user_name'
         request.headers['HTTP_PASSWORD'] = 'invalid_password'
 
         get :index, params: valid_params
