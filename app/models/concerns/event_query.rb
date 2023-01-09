@@ -1,6 +1,8 @@
 module EventQuery
   extend ActiveSupport::Concern
 
+  include BaseQuery
+
   included do
     extend ClassMethods
   end
@@ -14,10 +16,6 @@ module EventQuery
         issue_id_eq: params[:issue_id],
         action_eq: params[:action]
       }
-    end
-
-    def format_order(order = '')
-      order.presence || ['id DESC']
     end
   end
 end

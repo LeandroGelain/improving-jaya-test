@@ -13,6 +13,8 @@ class Events::Create
 
   def register_event!
     Event.create!(format_params)
+  rescue
+    raise Errors::CustomException.new(I18n.t('errors.messages.wrong_argument'))
   end
 
   def format_params

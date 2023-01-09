@@ -5,3 +5,4 @@ pt-BR:
     messages:
       not_authenticated: "Por favor reveja sua autorização. Atualmente, não autorizado."
       not_found: "Nenhum item encontrado."
+      wrong_argument: "Esses parâmetros não são suportados, por favor verificar a documentação."

@@ -9,6 +9,9 @@ gem "rails", "~> 7.0.4"
 # Serializacao de dados JSON
 gem 'active_model_serializers', '~> 0.10.2'
 
+# Realizar buscas avancadas (filtros)
+gem 'ransack', '~> 2.3', '>= 2.3.2'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
@@ -82,4 +85,6 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+
+  gem 'simplecov', '~> 0.12.0'
 end
