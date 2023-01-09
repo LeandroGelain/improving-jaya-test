@@ -21,6 +21,9 @@ Obs: É necessário ter o Docker instalado para executar o projeto.
 5) Selecionar `Let me select individual events` nas opções e Escolher `Issues` & `Issue comments`  
 6) Marcar Active no checkbox  
 7) Clicar em `Add Webhook`  
+8) Acessar `Settings > Environments`
+9) Criar um novo ambiente e adicionar uma chave `SECRET_TOKEN` com o `Authtoken` do ngrok.
+
 
 Para testar o funcionamento do webhook em ambiente de desenvolvimento local, foi utilizado o `ngrok`, [Link da documentação](https://ngrok.com/).  
 Neste caso, o ngrok já foi configurando junto ao docker, mas para identificar a url da sua conexão, basta acessar a [página que lista os agentes](https://dashboard.ngrok.com/tunnels/agents) e selecionar o que é correspondente a sua porta localhost.
